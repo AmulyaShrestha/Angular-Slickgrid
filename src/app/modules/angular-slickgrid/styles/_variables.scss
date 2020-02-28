@@ -28,6 +28,9 @@ $grid-header-background:                    rgba(255, 255, 255, .6) !default;
 $grid-cell-color:                           rgb(255, 255, 255) !default;
 
 /* cell */
+$cell-text-color:                           #000000 !default;
+$cell-font-family:                          $font-family !default;
+$cell-font-weight:                          normal !default;
 $cell-active-border:                        1px solid rgb(170, 170, 170) !default;
 $cell-border-top:                           1px solid $border-color !default;
 $cell-border-right:                         0 none !default;
@@ -57,6 +60,7 @@ $preheader-border-top:                      none !default;
 $preheader-font-size:                       $font-size-base + 3px !default;
 
 /* header */
+$header-background-color:                   transparent !default;
 $header-font-weight:                        bold !default;
 $header-text-color:                         #000000 !default;
 $header-padding-top:                        4px !default;
@@ -74,6 +78,10 @@ $header-border-top:                         0 none !default;                    
 $header-border-right:                       0 none !default;
 $header-border-bottom:                      0 none !default;
 $header-border-left:                        0 none !default;
+$header-column-border-top:                  0 none !default;                      // header, column titles, that is without the Filters
+$header-column-border-right:                0 none !default;
+$header-column-border-bottom:               0 none !default;
+$header-column-border-left:                 0 none !default;
 $header-filter-row-border-top:              0 none !default;                      // header row is where the Filters are showing
 $header-filter-row-border-right:            0 none !default;
 $header-filter-row-border-bottom:           0 none !default;
@@ -98,7 +106,6 @@ $icon-group-margin-right:                   2px !default;
 $icon-group-height:                         20px !default;
 $icon-group-width:                          14px !default;
 $table-background:                          transparent !default;
-$container-border:                          0px solid $border-color !default;
 $link-color:        				                #08c !default;
 $link-color-hover:                          darker($link-color, 15%) !default;
 $gray-dark:              			              #333 !default;

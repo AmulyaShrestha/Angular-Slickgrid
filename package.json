@@ -43,9 +43,10 @@
     "bump-version": "npm --no-git-tag-version version",
     "prepare-release": "cross-env npm run changelog && npm run build && npm run doc",
     "release": "standard-version",
-    "sass-build-task:scss-compile": "node-sass --source-map true src/app/modules/angular-slickgrid/styles/ -o dist/styles/css",
-    "sass-build-task:autoprefixer": "postcss dist/styles/css/*.css --use autoprefixer -d dist/styles/css",
-    "sass:build": "npm-run-all -p sass-build-task:*",
+    "sass-build-task:scss-compile:bootstrap": "node-sass --source-map true src/styles/slickgrid-theme-bootstrap.scss -o dist/styles/css",
+    "sass-build-task:scss-compile:material": "node-sass --source-map true src/styles/slickgrid-theme-material.scss -o dist/styles/css",
+    "sass-build-task:autoprefixer": "postcss dist/styles/css/ --use autoprefixer -d dist/styles/css",
+    "sass:build": "npm-run-all -p sass-build-task:scss-compile:*",
     "sass:copy": "cross-env copyfiles -f src/app/modules/angular-slickgrid/styles/*.scss dist/styles/sass",
     "sass:watch": "node-sass 'src/app/modules/angular-slickgrid/styles/**/*.scss' -c 'npm run sass:build'"
   },

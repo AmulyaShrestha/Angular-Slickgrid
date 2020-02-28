@@ -33,6 +33,7 @@
   border-left: $container-border-left;
   border-right: $container-border-right;
   position: relative;
+  font-family: $font-family;
 
   @mixin resetSlickCell() {
     padding: $cell-padding;
@@ -65,6 +66,9 @@
     .slick-row {
       position: absolute;
       width: 100%;
+      color: $cell-text-color;
+      font-family: $cell-font-family;
+      font-weight: $cell-font-weight;
 
       &:hover {
         background-color: $row-mouse-hover-color;
@@ -248,7 +252,7 @@
   }
 
   .slick-header-columns {
-    background: $table-background;
+    background-color: $header-background-color;
     width: calc(100% - #{$header-scroll-width-to-remove});
 
     .slick-header-sortable {
@@ -260,10 +264,10 @@
       height: $header-column-height;
       line-height: $font-size-base;
       margin: 0;
-      border-top: $header-border-top;
-      border-right: $header-border-right;
-      border-bottom: $header-border-bottom;
-      border-left: $header-border-left;
+      border-top: $header-column-border-top;
+      border-right: $header-column-border-right;
+      border-bottom: $header-column-border-bottom;
+      border-left: $header-column-border-left;
       white-space: normal;
       &.ui-state-default {
         @include resetSlickCell();
@@ -274,7 +278,7 @@
 
       @mixin ResetColumns () {
         /* like TH  */
-        background: $table-background;
+        background: $header-background-color;
         font-family: $font-family;
         color: $header-text-color;
         font-weight: $header-font-weight;
