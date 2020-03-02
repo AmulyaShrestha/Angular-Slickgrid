@@ -60,7 +60,8 @@ $preheader-border-top:                      none !default;
 $preheader-font-size:                       $font-size-base + 3px !default;
 
 /* header */
-$header-background-color:                   transparent !default;
+$header-background-color:                   #ffffff !default;
+$header-font-size:                          $font-size-base !default;
 $header-font-weight:                        bold !default;
 $header-text-color:                         #000000 !default;
 $header-padding-top:                        4px !default;
@@ -333,8 +334,11 @@ $header-menu-divider-width:                 95% !default;
 
 /* Checkbox Selector / Row Selection */
 $checkbox-selector-color:                   $primary-color !default;
-$checkbox-selector-size:                    13px !default;
+$checkbox-selector-size:                    ($icon-font-size - 1px) !default;
 $checkbox-selector-icon:                    "\f00c" !default;
+$checkbox-selector-icon-font-weight:        bold !default;
+$checkbox-selector-icon-checked:            $checkbox-selector-icon !default;
+$checkbox-selector-icon-unchecked:          $checkbox-selector-icon !default;
 $checkbox-selector-opacity:                 0.15 !default;
 $checkbox-selector-opacity-hover:           0.35 !default;
 

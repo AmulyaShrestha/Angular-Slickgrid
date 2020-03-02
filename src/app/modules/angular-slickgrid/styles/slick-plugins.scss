@@ -422,10 +422,10 @@
   input[type=checkbox] + label:before,
   #filter-checkbox-selectall-container > input[type=checkbox] + label:before {
     cursor: pointer;
-    content: $checkbox-selector-icon;
+    content: $checkbox-selector-icon-unchecked;
     color: $checkbox-selector-color;
     display: inline-block;
-    font-weight: bold;
+    font-weight: $checkbox-selector-icon-font-weight;
     font-family: $icon-font-family;
     font-size: $checkbox-selector-size;
     opacity: $checkbox-selector-opacity; /* unchecked icon */
@@ -438,6 +438,7 @@
 
   input[type=checkbox]:checked + label:before,
   #filter-checkbox-selectall-container > input[type=checkbox]:checked + label:before {
+    content: $checkbox-selector-icon-checked;
     opacity: 1; /* checked icon */
   }
 }
