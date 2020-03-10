@@ -193,6 +193,11 @@
         height: 100%;
         padding: 0;
       }
+      .slick-group-title {
+        height: $draggable-group-title-height;
+        line-height: $draggable-group-title-line-height;
+        vertical-align: $draggable-group-title-vertical-align;
+      }
       .slick-group-toggle {
         color: $icon-group-color;
         font-weight: $icon-group-font-weight;
@@ -252,6 +257,7 @@
   }
 
   .slick-header-columns {
+    background: none;
     background-color: $header-background-color;
     width: calc(100% - #{$header-scroll-width-to-remove});
 
@@ -328,15 +334,15 @@
         right: $sort-indicator-number-right;
         top: $sort-indicator-number-top;
       }
-      .slick-sort-indicator-asc {
-        &:before {
+      .slick-sort-indicator-asc:before {
           content: $icon-sort-asc;
-        }
+          font-family: $icon-font-family;
+          font-size: $icon-sort-font-size;
       }
-      .slick-sort-indicator-desc {
-        &:before {
+      .slick-sort-indicator-desc:before {
           content: $icon-sort-desc;
-        }
+          font-family: $icon-font-family;
+          font-size: $icon-sort-font-size;
       }
       .slick-resizable-handle {
         width: 7px;

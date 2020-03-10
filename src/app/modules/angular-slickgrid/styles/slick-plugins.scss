@@ -7,6 +7,7 @@
 
 .slick-cell-menu {
   position: absolute;
+  font-family:  $font-family;
   background: $cell-menu-bg-color;
   border: $cell-menu-border;
   border-radius: $cell-menu-border-radius;
@@ -20,12 +21,14 @@
 
   > .close {
     float: right;
+    cursor: pointer;
     background-color: $cell-menu-close-btn-bg-color;
     width: $cell-menu-close-btn-width;
     height: $cell-menu-close-btn-height;
     margin: $cell-menu-close-btn-margin;
     padding: $cell-menu-close-btn-padding;
     border: $cell-menu-close-btn-border;
+    font-size: $cell-menu-close-btn-font-size;
 
     > span {
       opacity: $cell-menu-close-btn-opacity;
@@ -49,6 +52,7 @@
     list-style: none outside none;
     margin: 0;
     width: $cell-menu-item-width;
+    height: $cell-menu-item-height;
 
     &:hover {
       border: $cell-menu-item-hover-border;
@@ -71,10 +75,11 @@
     }
 
     .slick-cell-menu-icon {
+      font-size: $cell-menu-icon-font-size;
       background-position: center center;
       background-repeat: no-repeat;
       display: inline-block;
-      height: $cell-menu-icon-height;
+      line-height: ($cell-menu-icon-font-size + 2px);
       margin-right: $cell-menu-icon-margin-right;
       vertical-align: middle;
       width: $cell-menu-icon-width;
@@ -181,7 +186,9 @@
       background-position: center center;
       background-repeat: no-repeat;
       display: inline-block;
+      font-size: $context-menu-icon-font-size;
       height: $context-menu-icon-height;
+      line-height: $context-menu-icon-line-height;
       margin-right: $context-menu-icon-margin-right;
       vertical-align: middle;
       width: $context-menu-icon-width;
@@ -280,7 +287,8 @@
 }
 .slick-header-menubutton:before {
   font-family: $icon-font-family;
-  font-size: 14px;
+  font-size: $header-menu-button-icon-font-size;
+  font-weight: $header-menu-button-icon-font-weight;
   content: $header-menu-button-icon;
 }
 
@@ -356,10 +364,14 @@
   background-color: $header-menu-divider-color;
 }
 
+
 .slick-header-menuicon {
   background-position: center center;
   background-repeat: no-repeat;
   display: inline-block;
+  font-size: $header-menu-icon-font-size;
+  font-weight: $header-menu-icon-font-weight;
+  line-height: $header-menu-icon-line-height;
   height: $header-menu-icon-height;
   margin-right: $header-menu-icon-margin-right;
   vertical-align: middle;
@@ -842,7 +854,7 @@ input.slider-editor-input[type=range] {
 .slider-editor {
   .slider-value {
     padding: 0;
-    height: $header-input-height;
+    height: $slider-editor-height;
     .input-group-text {
       padding: $slider-editor-number-padding;
       font-size: $slider-filter-number-font-size;
